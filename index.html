@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PLAGALUA | Roblox Developer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    font-family:Inter,sans-serif;
+    color:white;
+
+    background:url("https://i.pinimg.com/originals/db/db/b6/dbdbb6defbc6a6482b43c4e36a526a4f.jpg");
+    background-size:cover;
+    background-position:center;
+    background-attachment:fixed;
+}
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,0.72);
+    z-index:-1;
+}
+
+/* NAV */
+nav{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    padding:20px;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+    position:relative;
+}
+
+.logo{
+    position:absolute;
+    left:20px;
+    font-weight:900;
+}
+
+.logo span{ color:#a855f7; }
+
+nav a{
+    color:#aaa;
+    font-weight:700;
+    text-transform:uppercase;
+    font-size:13px;
+    cursor:pointer;
+    text-decoration:none;
+}
+
+nav a:hover{
+    color:#a855f7;
+}
+
+/* CONTAINER */
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:40px 20px;
+}
+
+/* SECTIONS */
+.section{display:none}
+.section.active{display:block}
+
+/* TITLES */
+.center-title{
+    text-align:center;
+}
+
+h1{
+    font-size:50px;
+    margin:0;
+    font-weight:900;
+}
+
+h1 span{color:#a855f7}
+
+/* CARDS */
+.card{
+    background:rgba(15,15,18,0.75);
+    border:1px solid rgba(255,255,255,0.08);
+    padding:20px;
+    border-radius:15px;
+    margin-top:15px;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    padding:10px 18px;
+    background:white;
+    color:black;
+    font-weight:900;
+    border-radius:10px;
+    text-decoration:none;
+    margin-top:10px;
+}
+
+.btn:hover{
+    background:#a855f7;
+    color:white;
+}
+
+/* HOME LAYOUT */
+.home{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+/* AVATAR */
+.avatar{
+    width:200px;
+    height:200px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #a855f7;
+    box-shadow:0 0 20px rgba(168,85,247,0.5);
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">PLAGA<span>LUA</span></div>
+
+    <a onclick="show('home')">Inicio</a>
+    <a onclick="show('projects')">Proyectos</a>
+    <a onclick="show('prices')">Precios</a>
+    <a onclick="show('contact')">Contacto</a>
+</nav>
+
+<div class="container">
+
+<!-- HOME -->
+<div id="home" class="section active">
+
+    <div class="center-title">
+        <h1>ROBLOX<br><span>DEVELOPER</span></h1>
+        <p>Scripter & UI Designer | PLAGALUA</p>
+    </div>
+
+    <div class="home" style="margin-top:30px;">
+
+        <div>
+            <div class="card">
+                <h3>Sobre mí</h3>
+                <p>Hola soy plaga soy un developer de roblox especializado en buildear y script haciendo systema de roblox.</p>
+            </div>
+
+            <div class="card">
+                <h3>Perfil Roblox</h3>
+                <p>@PLAGALUA</p>
+
+                <a class="btn" href="https://www.roblox.com/es/users/3419341197/profile" target="_blank">
+                    Ver perfil
+                </a>
+            </div>
+        </div>
+
+        <!-- 🔥 FOTO -->
+        <img class="avatar" src="https://imgur.com/a/AzGiwqh">
+
+    </div>
+
+</div>
+
+<!-- PROJECTS -->
+<div id="projects" class="section">
+    <h2>Proyectos</h2>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px;margin-top:20px;">
+
+        <div class="card">
+            <h3>Sistemas UI</h3>
+            <p>Interfaces modernas optimizadas para Roblox.</p>
+        </div>
+
+        <div class="card">
+            <h3>Scripting Luau</h3>
+            <p>Sistemas avanzados y lógica optimizada.</p>
+        </div>
+
+        <div class="card">
+            <h3>Game Systems</h3>
+            <p>Shop systems, DataStores y herramientas.</p>
+        </div>
+
+    </div>
+</div>
+
+<!-- PRICES -->
+<div id="prices" class="section">
+    <h2>Precios</h2>
+
+    <div style="display:flex;flex-direction:column;gap:15px;margin-top:20px;">
+
+        <div class="card">
+            <h3>Básico</h3>
+            <p>$120 MXN — UI simple / scripts pequeños</p>
+        </div>
+
+        <div class="card">
+            <h3>Intermedio</h3>
+            <p>$180 - $360 MXN — sistemas completos + UI avanzada</p>
+        </div>
+
+        <div class="card">
+            <h3>Premium</h3>
+            <p>$480+ MXN — sistemas grandes + optimización total</p>
+        </div>
+
+    </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="section">
+    <h2>Contacto</h2>
+
+    <div class="card">
+        Discord / Roblox / YouTube
+    </div>
+
+    <div class="card">
+        <h3>Discord</h3>
+
+        <a class="btn" href="https://discord.com/users/1421017925736726578" target="_blank">
+            Abrir Discord
+        </a>
+    </div>
+</div>
+
+</div>
+
+<script>
+function show(id){
+    document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
