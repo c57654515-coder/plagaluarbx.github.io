@@ -169,8 +169,8 @@ h1 span{color:#a855f7}
             </div>
         </div>
 
-        <!-- 🔥 FOTO -->
-        <img class="avatar" src="https://imgur.com/a/AzGiwqh">
+        <!-- 🔥 FOTO DISCORD -->
+        <img class="avatar" id="discord-avatar">
 
     </div>
 
@@ -248,6 +248,17 @@ function show(id){
     document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
     document.getElementById(id).classList.add('active');
 }
+
+fetch("https://api.lanyard.rest/v1/users/1421017925736726578")
+.then(res => res.json())
+.then(data => {
+
+    const user = data.data.discord_user;
+
+    document.getElementById("discord-avatar").src =
+    `https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png?size=512`;
+
+});
 </script>
 
 </body>
