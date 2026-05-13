@@ -166,7 +166,7 @@ h1 span{color:#ff2e2e}
     margin-top:20px;
 }
 
-/* hover effect */
+/* hover */
 .projects-grid:hover .card,
 .prices-grid:hover .card{
     opacity:0.5;
@@ -177,6 +177,20 @@ h1 span{color:#ff2e2e}
 .prices-grid .card:hover{
     opacity:1;
     transform:scale(1.08);
+}
+
+/* footer */
+.footer{
+    text-align:center;
+    padding:18px;
+    margin-top:40px;
+
+    font-size:12px;
+    color:#aaa;
+
+    border-top:1px solid rgba(255,255,255,0.08);
+    background:rgba(0,0,0,0.35);
+    backdrop-filter:blur(10px);
 }
 
 h2{margin-top:10px;}
@@ -291,7 +305,6 @@ p{color:#ddd;}
 
     <div class="card">
         <h3>Discord</h3>
-
         <a class="btn" href="https://discord.com/users/1421017925736726578" target="_blank">
             Abrir Discord
         </a>
@@ -299,24 +312,27 @@ p{color:#ddd;}
 
     <div class="card">
         <h3>YouTube</h3>
-
         <a class="btn" href="https://www.youtube.com/" target="_blank">
             Visitar YouTube
         </a>
     </div>
 </div>
 
+<!-- FOOTER -->
+<footer class="footer">
+    © 2026 Plagaluastd el guapo.
+</footer>
+
 </div>
 
 <script>
 
-/* NAV */
 function show(id){
     document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
     document.getElementById(id).classList.add('active');
 }
 
-/* DISCORD AVATAR (estable) */
+/* avatar discord */
 fetch("https://discordlookup.mesalytic.moe/v1/user/1421017925736726578")
 .then(r=>r.json())
 .then(data=>{
